@@ -20,17 +20,20 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/egl/libGLES_mali.so",
             ],
             shared_libs: [
+                "android.hardware.graphics.allocator-V2-ndk",
+                "libbinder_ndk",
                 "libnativewindow",
                 "libutils",
-                "liblog",
-                "libdmabufheap",
-                "libz",
-                "libcutils",
-                "arm.graphics-V1-ndk_platform",
                 "android.hardware.graphics.mapper@4.0",
                 "libgralloctypes",
                 "libhidlbase",
+                "liblog",
+                "libcutils",
                 "libhardware",
+                "android.hardware.graphics.common-V7-ndk",
+                "libbase",
+                "libdmabufheap",
+                "libz",
                 "libc++",
                 "libc",
                 "libm",
@@ -40,6 +43,35 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "32",
     relative_install_path: "egl",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libamavutils",
+    owner: "freebox",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libamavutils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libc",
+                "libbinder",
+                "liblog",
+                "libui",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
     prefer: true,
     soc_specific: true,
 }
@@ -90,7 +122,45 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libteec",
-                "libamavutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libplayreadymediadrmplugin",
+    owner: "freebox",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libplayreadymediadrmplugin.so",
+            ],
+            shared_libs: [
+                "libplayready",
+                "libcutils",
+                "liblog",
+                "libstagefright_foundation",
+                "libutils",
+                "libssl",
+                "android.hardware.drm@1.0",
+                "android.hardware.drm@1.1",
+                "android.hardware.drm@1.2",
+                "android.hardware.drm@1.3",
+                "libbase",
+                "libhidlbase",
+                "libbinder",
+                "libhidlmemory",
+                "android.hardware.drm@1.4",
                 "libc++",
                 "libc",
                 "libm",
@@ -171,55 +241,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtee_load_video_fw",
-    owner: "freebox",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libtee_load_video_fw.so",
-            ],
-            shared_libs: [
-                "libteec",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libteec",
-    owner: "freebox",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libteec.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libvendorfont_vendor",
     stem: "libvendorfont",
     owner: "freebox",
@@ -260,37 +281,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libcutils",
                 "libteec",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    relative_install_path: "mediadrm",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libplayreadymediadrmplugin",
-    owner: "freebox",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/mediadrm/libplayreadymediadrmplugin.so",
-            ],
-            shared_libs: [
-                "libplayready",
-                "libcutils",
-                "liblog",
-                "libstagefright_foundation",
-                "libutils",
-                "libssl",
                 "libc++",
                 "libc",
                 "libm",
@@ -490,60 +480,6 @@ cc_prebuilt_library_shared {
     system_ext_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "libHwAudio_dcvdec",
-    owner: "freebox",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/odm/lib/libHwAudio_dcvdec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libm",
-                "libc++",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libHwAudio_dtshd",
-    owner: "freebox",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/odm/lib/libHwAudio_dtshd.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    device_specific: true,
-}
-
 android_app_import {
     name: "droidlogic-res",
     owner: "freebox",
@@ -584,6 +520,15 @@ dex_import {
 }
 
 prebuilt_etc_xml {
+    name: "manifest_android.hardware.drm@1.4-service.playready.xml",
+    owner: "freebox",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.playready.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "vendor.amlogic.hardware.subtitleserver@1.0.xml",
     owner: "freebox",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.amlogic.hardware.subtitleserver@1.0.xml",
@@ -593,15 +538,25 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_binary {
-    name: "tee-supplicant",
+    name: "android.hardware.drm@1.4-service.playready",
     owner: "freebox",
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/bin/tee-supplicant",
+                "proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.playready",
             ],
             shared_libs: [
-                "libteec",
+                "android.hardware.drm@1.0",
+                "android.hardware.drm@1.1",
+                "android.hardware.drm@1.2",
+                "android.hardware.drm@1.3",
+                "libbase",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libplayreadymediadrmplugin",
+                "android.hardware.drm@1.4",
                 "libc++",
                 "libc",
                 "libm",
@@ -614,6 +569,7 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
+    relative_install_path: "hw",
     soc_specific: true,
 }
 
@@ -653,32 +609,6 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "libteec",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "tee_preload_fw",
-    owner: "freebox",
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/bin/tee_preload_fw",
-            ],
-            shared_libs: [
-                "libteec",
-                "libtee_load_video_fw",
                 "libc++",
                 "libc",
                 "libm",
