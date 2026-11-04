@@ -62,7 +62,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libGLES_mali \
-    consumerir.amlogic \
     liboemcrypto \
     libplayready \
     libsecmem \
