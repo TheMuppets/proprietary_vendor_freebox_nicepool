@@ -241,6 +241,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtee_load_video_fw",
+    owner: "freebox",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libtee_load_video_fw.so",
+            ],
+            shared_libs: [
+                "libteec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvendorfont_vendor",
     stem: "libvendorfont",
     owner: "freebox",
@@ -538,6 +563,33 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_binary {
+    name: "hdcp_tx22",
+    owner: "freebox",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/hdcp_tx22",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.drm@1.4-service.playready",
     owner: "freebox",
     target: {
@@ -570,6 +622,31 @@ cc_prebuilt_binary {
     },
     prefer: true,
     relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "tee-supplicant",
+    owner: "freebox",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/tee-supplicant",
+            ],
+            shared_libs: [
+                "libteec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
 
@@ -609,6 +686,32 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "libteec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "tee_preload_fw",
+    owner: "freebox",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/tee_preload_fw",
+            ],
+            shared_libs: [
+                "libteec",
+                "libtee_load_video_fw",
                 "libc++",
                 "libc",
                 "libm",

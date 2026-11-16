@@ -28,9 +28,12 @@ PRODUCT_COPY_FILES += \
     vendor/freebox/nicepool/proprietary/vendor/etc/bluetooth/bcm43569a2.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bcm43569a2.hcd \
     vendor/freebox/nicepool/proprietary/vendor/etc/framerate.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/framerate.cfg \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.playready.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.playready.rc \
+    vendor/freebox/nicepool/proprietary/vendor/etc/init/hdcp_tx22.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hdcp_tx22.rc \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/init.hbg.remote.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.hbg.remote.rc \
+    vendor/freebox/nicepool/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/tee_hdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_hdcp.rc \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/tee_key_inject.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_key_inject.rc \
+    vendor/freebox/nicepool/proprietary/vendor/etc/init/tee_preload_fw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_preload_fw.rc \
     vendor/freebox/nicepool/proprietary/vendor/etc/permissions/droidlogic.software.core.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/droidlogic.software.core.xml \
     vendor/freebox/nicepool/proprietary/vendor/etc/permissions/droidlogic.software.netflix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/droidlogic.software.netflix.xml \
     vendor/freebox/nicepool/proprietary/vendor/etc/permissions/droidlogic.tv.software.core.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/droidlogic.tv.software.core.xml \
@@ -67,6 +70,7 @@ PRODUCT_PACKAGES += \
     libplayreadymediadrmplugin \
     libsecmem \
     libsubtitlemanager_jni_vendor \
+    libtee_load_video_fw \
     libvendorfont_vendor \
     libnetflixplugin \
     vendor.amlogic.hardware.subtitleserver@1.0_vendor \
@@ -81,9 +85,12 @@ PRODUCT_PACKAGES += \
     droidlogic-dtvkit \
     manifest_android.hardware.drm@1.4-service.playready.xml \
     vendor.amlogic.hardware.subtitleserver@1.0.xml \
+    hdcp_tx22 \
     android.hardware.drm@1.4-service.playready \
+    tee-supplicant \
     tee_hdcp \
-    tee_key_inject
+    tee_key_inject \
+    tee_preload_fw
 
 PRODUCT_PACKAGES += \
     vendor_lib_hw_vulkan_amlogic_so
