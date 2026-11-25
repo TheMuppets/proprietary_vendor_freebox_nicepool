@@ -28,6 +28,7 @@ PRODUCT_COPY_FILES += \
     vendor/freebox/nicepool/proprietary/vendor/etc/bluetooth/bcm43569a2.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bcm43569a2.hcd \
     vendor/freebox/nicepool/proprietary/vendor/etc/framerate.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/framerate.cfg \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.playready.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.playready.rc \
+    vendor/freebox/nicepool/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/hdcp_tx22.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hdcp_tx22.rc \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/init.hbg.remote.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.hbg.remote.rc \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
@@ -65,13 +66,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libGLES_mali \
     libamavutils \
-    liboemcrypto \
+    liboemcrypto_vendor \
     libplayready \
     libplayreadymediadrmplugin \
     libsecmem \
     libsubtitlemanager_jni_vendor \
     libtee_load_video_fw \
     libvendorfont_vendor \
+    libwvhidl \
     libnetflixplugin \
     vendor.amlogic.hardware.subtitleserver@1.0_vendor \
     libSubtitleClient \
@@ -84,9 +86,11 @@ PRODUCT_PACKAGES += \
     droidlogic \
     droidlogic-dtvkit \
     manifest_android.hardware.drm@1.4-service.playready.xml \
+    manifest_android.hardware.drm@1.4-service.widevine.xml \
     vendor.amlogic.hardware.subtitleserver@1.0.xml \
     hdcp_tx22 \
     android.hardware.drm@1.4-service.playready \
+    android.hardware.drm@1.4-service.widevine \
     tee-supplicant \
     tee_hdcp \
     tee_key_inject \
