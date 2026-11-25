@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/freebox/nicepool/proprietary/vendor/etc/bluetooth/BCM4359C0.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/BCM4359C0.hcd \
     vendor/freebox/nicepool/proprietary/vendor/etc/bluetooth/BCM4359_AP6398SA.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/BCM4359_AP6398SA.hcd \
     vendor/freebox/nicepool/proprietary/vendor/etc/bluetooth/BCM4359_AP6398SA3.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/BCM4359_AP6398SA3.hcd \
+    vendor/freebox/nicepool/proprietary/vendor/etc/bluetooth/BCM4362_AP6398SR32.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/BCM4362_AP6398SR32.hcd \
     vendor/freebox/nicepool/proprietary/vendor/etc/bluetooth/bcm43569a2.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bcm43569a2.hcd \
     vendor/freebox/nicepool/proprietary/vendor/etc/framerate.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/framerate.cfg \
     vendor/freebox/nicepool/proprietary/vendor/etc/init/init.hbg.remote.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.hbg.remote.rc \
@@ -38,18 +39,23 @@ PRODUCT_COPY_FILES += \
     vendor/freebox/nicepool/proprietary/vendor/etc/permissions/nrdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/nrdp.xml \
     vendor/freebox/nicepool/proprietary/vendor/etc/permissions/privapp-permissions-amlogic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-amlogic.xml \
     vendor/freebox/nicepool/proprietary/vendor/etc/remote.txt:$(TARGET_COPY_OUT_VENDOR)/etc/remote.txt \
+    vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/clm_bcm4359c51a2_ag.blob:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/clm_bcm4359c51a2_ag.blob \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/config_bcm4356a2_ag.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/config_bcm4356a2_ag.txt \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/config_bcm4359c0_ag.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/config_bcm4359c0_ag.txt \
+    vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/config_bcm4359c51a2_ag.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/config_bcm4359c51a2_ag.txt \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4356a2_ag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4356a2_ag.bin \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4356a2_ag_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4356a2_ag_apsta.bin \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4356a2_ag_p2p.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4356a2_ag_p2p.bin \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4359c0_ag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4359c0_ag.bin \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4359c0_ag_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4359c0_ag_apsta.bin \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4359c0_ag_p2p.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4359c0_ag_p2p.bin \
+    vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4359c51a2_ag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4359c51a2_ag.bin \
+    vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/fw_bcm4359c51a2_ag_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4359c51a2_ag_apsta.bin \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/nvram_ap6356.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/nvram_ap6356.txt \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/nvram_ap6398s.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/nvram_ap6398s.txt \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/nvram_ap6398sa.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/nvram_ap6398sa.txt \
     vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/nvram_ap6398sa3.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/nvram_ap6398sa3.txt \
+    vendor/freebox/nicepool/proprietary/vendor/firmware/wifi/nvram_ap6398sr32.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/nvram_ap6398sr32.txt \
     vendor/freebox/nicepool/proprietary/vendor/lib/teetz/00d1ca22-1764-4e35-90aa5b8c12630764.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/00d1ca22-1764-4e35-90aa5b8c12630764.ta \
     vendor/freebox/nicepool/proprietary/vendor/lib/teetz/2c1a33c0-44cc-11e5-bc3b0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/2c1a33c0-44cc-11e5-bc3b0002a5d5c51b.ta \
     vendor/freebox/nicepool/proprietary/vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta \
